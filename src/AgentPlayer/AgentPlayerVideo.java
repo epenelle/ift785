@@ -9,6 +9,10 @@ public class AgentPlayerVideo extends AgentPlayerMultiMedia {
         super(titre, contents, ownership);
     }
 
+    public AgentPlayerVideo(String titre, Object contents, Ownership ownership, String osName) {
+        super(titre, contents, ownership, osName);
+    }
+
     protected void start() {
         player = playerFactory.createPlayerVideo();
         player.play(this);

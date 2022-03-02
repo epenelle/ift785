@@ -1,6 +1,6 @@
 package MediaPlayer;
 
-public class MacOSXMediaPlayerFactory extends MediaPlayerFactory {
+public class MacOSMediaPlayerFactory extends MediaPlayerFactory {
 
     public PlayerVideo createPlayerVideo() {
         return new QuickTime();

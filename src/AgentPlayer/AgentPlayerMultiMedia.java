@@ -2,12 +2,11 @@ package AgentPlayer;
 
 import MediaPlayer.MediaPlayer;
 import MediaPlayer.MediaPlayerFactory;
-import MediaPlayer.MacOSXMediaPlayerFactory;
+import MediaPlayer.MacOSMediaPlayerFactory;
 import MediaPlayer.WindowsMediaPlayerFactory;
+import MediaPlayer.LinuxMediaPlayerFactory;
 import Ownership.*;
 
-import javax.print.attribute.standard.Media;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
@@ -23,8 +22,9 @@ public abstract class AgentPlayerMultiMedia {
     */
 
     private static final Map<String,Class> factoryMap = Map.of(
-            "Windows 10", WindowsMediaPlayerFactory.class,
-            "mac os", MacOSXMediaPlayerFactory.class
+            "win", WindowsMediaPlayerFactory.class,
+            "mac", MacOSMediaPlayerFactory.class,
+            "lin", LinuxMediaPlayerFactory.class
     );
 
     public AgentPlayerState created = new Created();
@@ -41,8 +41,17 @@ public abstract class AgentPlayerMultiMedia {
         this.titre = titre;
         this.contents = contents;
         state = created;
-        String osName = System.getProperty("os.name");
-        System.out.println("OS name  " + osName);
+        String osName = System.getProperty("os.name").toLowerCase().substring(0,3);
+
+        setFactory(osName);
+    }
+
+    // Ce constructeur permet de simuler le comportement sur un autre systeme d'exploitation
+    public AgentPlayerMultiMedia(String titre, Object contents, Ownership ownership, String osName) {
+        this.ownership = ownership;
+        this.titre = titre;
+        this.contents = contents;
+        state = created;
         setFactory(osName);
     }
 

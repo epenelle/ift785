@@ -10,7 +10,7 @@ public class AgentPlayerMusique extends AgentPlayerMultiMedia {
     }
 
     protected void start() {
-        player = new iTunes();
+        player = playerFactory.createPlayerMusique();
         player.play(this);
     }
 

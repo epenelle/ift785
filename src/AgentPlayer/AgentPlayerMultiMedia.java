@@ -1,15 +1,31 @@
 package AgentPlayer;
 
 import MediaPlayer.MediaPlayer;
+import MediaPlayer.MediaPlayerFactory;
+import MediaPlayer.MacOSXMediaPlayerFactory;
+import MediaPlayer.WindowsMediaPlayerFactory;
 import Ownership.*;
 
+import javax.print.attribute.standard.Media;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Map;
 
 public abstract class AgentPlayerMultiMedia {
 
     public String titre;
     public Object contents;
     public MediaPlayer player;
+    protected MediaPlayerFactory playerFactory;
+    /*
+     On cree un dictionnaire de classe en utilisant les capacites reflexives.
+     Cela evite les conditionnelles pour determiner le type de factory a utiliser.
+    */
+
+    private static final Map<String,Class> factoryMap = Map.of(
+            "Windows 10", WindowsMediaPlayerFactory.class,
+            "mac os x", MacOSXMediaPlayerFactory.class
+    );
 
     public AgentPlayerState created = new Created();
     public AgentPlayerState started = new Started();
@@ -25,6 +41,18 @@ public abstract class AgentPlayerMultiMedia {
         this.titre = titre;
         this.contents = contents;
         state = created;
+        String osName = System.getProperty("os.name");
+        System.out.println("OS name  " + osName);
+        setFactory(osName);
+    }
+
+    private void setFactory(String osName){
+        try {
+            playerFactory = (MediaPlayerFactory) factoryMap.get(osName).getDeclaredConstructor().newInstance();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void clickStart() {

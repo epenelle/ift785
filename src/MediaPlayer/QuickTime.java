@@ -1,9 +1,8 @@
 package MediaPlayer;
 
 import AgentPlayer.AgentPlayerMultiMedia;
-import MediaPlayer.MediaPlayer;
 
-public class QuickTime implements MediaPlayer {
+public class QuickTime implements PlayerVideo {
 
     public void pause(AgentPlayerMultiMedia agentPlayerMultiMedia) {
         System.out.println("Paused media on QuickTime.");

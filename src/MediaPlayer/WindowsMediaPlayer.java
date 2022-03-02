@@ -1,20 +1,18 @@
 package MediaPlayer;
 
-import AgentPlayer.*;
+import AgentPlayer.AgentPlayerMultiMedia;
 
-public class iTunes implements PlayerMusique {
+public class WindowsMediaPlayer implements PlayerMusique, PlayerVideo {
 
     public void pause(AgentPlayerMultiMedia agentPlayerMultiMedia) {
-        System.out.println("Paused media on iTunes.");
+
     }
 
     public void close(AgentPlayerMultiMedia agentPlayerMultiMedia) {
-        System.out.println("Closed media on iTunes.");
+
     }
 
     public void play(AgentPlayerMultiMedia agentPlayerMultiMedia) {
-        System.out.println("Playing media on iTunes.");
 
     }
-
 }

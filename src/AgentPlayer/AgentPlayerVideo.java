@@ -1,16 +1,16 @@
 package AgentPlayer;
 
-import MediaPlayer.QuickTime;
 import Ownership.*;
 
 public class AgentPlayerVideo extends AgentPlayerMultiMedia {
+
 
     public AgentPlayerVideo(String titre, Object contents, Ownership ownership) {
         super(titre, contents, ownership);
     }
 
     protected void start() {
-        player = new QuickTime();
+        player = playerFactory.createPlayerVideo();
         player.play(this);
     }
 

@@ -24,7 +24,7 @@ public abstract class AgentPlayerMultiMedia {
 
     private static final Map<String,Class> factoryMap = Map.of(
             "Windows 10", WindowsMediaPlayerFactory.class,
-            "mac os x", MacOSXMediaPlayerFactory.class
+            "mac os", MacOSXMediaPlayerFactory.class
     );
 
     public AgentPlayerState created = new Created();
@@ -49,10 +49,25 @@ public abstract class AgentPlayerMultiMedia {
     private void setFactory(String osName){
         try {
             playerFactory = (MediaPlayerFactory) factoryMap.get(osName).getDeclaredConstructor().newInstance();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /*
+     * NOTE : Une autre option pour determiner le type de factory serait de proceder par conditionnelles en utilisant
+     * les 3 methodes suivantes.
+     */
+    public static boolean isWindows() {
+        return System.getProperty("os.name").toLowerCase().startsWith("windows");
+    }
+
+    public static boolean isMac() {
+        return System.getProperty("os.name").toLowerCase().startsWith("mac");
+    }
+
+    public static boolean isUnix() {
+        return System.getProperty("os.name").toLowerCase().startsWith("linux");
     }
 
     public void clickStart() {

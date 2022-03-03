@@ -7,6 +7,7 @@ import MediaPlayer.WindowsMediaPlayerFactory;
 import MediaPlayer.LinuxMediaPlayerFactory;
 import Ownership.*;
 
+import javax.print.attribute.standard.Media;
 import java.lang.reflect.Method;
 import java.util.Map;
 
@@ -42,7 +43,6 @@ public abstract class AgentPlayerMultiMedia {
         this.contents = contents;
         state = created;
         String osName = System.getProperty("os.name").toLowerCase().substring(0,3);
-
         setFactory(osName);
     }
 
@@ -57,7 +57,9 @@ public abstract class AgentPlayerMultiMedia {
 
     private void setFactory(String osName){
         try {
-            playerFactory = (MediaPlayerFactory) factoryMap.get(osName).getDeclaredConstructor().newInstance();
+            Class factoryClass =  factoryMap.get(osName);
+            Method getInstance = factoryMap.get(osName).getMethod("getInstance");
+            playerFactory = (MediaPlayerFactory) getInstance.invoke(factoryClass);
         } catch (Exception e) {
             e.printStackTrace();
         }

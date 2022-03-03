@@ -1,4 +1,6 @@
 import AgentPlayer.*;
+import MediaPlayer.PlayerMusique;
+import MediaPlayer.PlayerVideo;
 import MediaPlayer.QuickTime;
 import MediaPlayer.iTunes;
 import Ownership.Bought;
@@ -98,10 +100,10 @@ class AgentPlayerMultiMediaTest {
         apmVideoLoue.clickStart();
 
         // Apres
-        assertInstanceOf(iTunes.class, apmMusique.getPlayer());
-        assertInstanceOf(iTunes.class, apmMusiqueLoue.getPlayer());
-        assertInstanceOf(QuickTime.class, apmVideo.getPlayer());
-        assertInstanceOf(QuickTime.class, apmVideoLoue.getPlayer());
+        assertInstanceOf(PlayerMusique.class, apmMusique.getPlayer());
+        assertInstanceOf(PlayerMusique.class, apmMusiqueLoue.getPlayer());
+        assertInstanceOf(PlayerVideo.class, apmVideo.getPlayer());
+        assertInstanceOf(PlayerVideo.class, apmVideoLoue.getPlayer());
     }
 
     @Test

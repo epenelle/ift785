@@ -7,7 +7,7 @@ public class Afficheur {
     static private Afficheur afficheur;
 
     private Afficheur() {
-        
+
     }
 
     synchronized public static Afficheur getAfficheur() {

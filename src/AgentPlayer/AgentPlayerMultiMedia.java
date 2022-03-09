@@ -1,5 +1,6 @@
 package AgentPlayer;
 
+import Affichage.Afficheur;
 import MediaPlayer.MediaPlayer;
 import MediaPlayer.MediaPlayerFactory;
 import MediaPlayer.MacOSMediaPlayerFactory;
@@ -11,12 +12,19 @@ import javax.print.attribute.standard.Media;
 import java.lang.reflect.Method;
 import java.util.Map;
 
-public abstract class AgentPlayerMultiMedia {
+public abstract class AgentPlayerMultiMedia implements AbstractSubject {
 
     public String titre;
     public Object contents;
     public MediaPlayer player;
     protected MediaPlayerFactory playerFactory;
+    /*
+     * NOTE : Comme il est explique qu'il y a qu'un seul afficheur et qu'aucun autre objet ne semble jouer le role de
+     * subscriber selon le Observer DP, il est preferable de seulement creer une variable d'instance afficheur ici.
+     * Si jamais il y avait d'autres subscriber, il serait mieux de creer une liste de subscribers et d'y inclure l'afficheur.
+     */
+    public Afficheur afficheur = Afficheur.getAfficheur();
+
     /*
      On cree un dictionnaire de classe en utilisant les capacites reflexives.
      Cela evite les conditionnelles pour determiner le type de factory a utiliser.
@@ -81,20 +89,47 @@ public abstract class AgentPlayerMultiMedia {
         return System.getProperty("os.name").toLowerCase().startsWith("linux");
     }
 
+    /*
+     * NOTE :
+     */
+
+    @Override
+    public void notifyObservers() {
+        /*
+         * NOTE : Normallement, il faudrait iterer sur une liste de souscripteurs, mais l'application n'en mentionne qu'un seul.
+         * NOTE : Normalement, il devrait y avoir une methode update, mais on ne peut pas changer la Classe Afficheur
+         */
+        afficheur.display(this.titre, this.state.toString());
+    }
+
+    @Override
+    public void subscribe(AbstractObserver observer) {
+        // NOTE : Normalement, cette methode ajouterait un souscripteur a la liste
+    }
+
+    @Override
+    public void unsubscribe(AbstractObserver observer) {
+        // NOTE : Normalement, cette methode supprimerait un souscripteur de la liste
+    }
+
     public void clickStart() {
         this.state.start(this);
+        this.notifyObservers();
     }
 
     public void clickPause() {
         this.state.pause(this);
+        this.notifyObservers();
     }
 
     public void clickResume() {
         this.state.resume(this);
+        this.notifyObservers();
     }
 
     public void clickStop() {
         this.state.stop(this);
+        this.notifyObservers();
     }
 
     protected abstract void start();

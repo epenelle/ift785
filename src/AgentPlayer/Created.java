@@ -8,16 +8,15 @@ public class Created implements AgentPlayerState {
             System.out.println("La location est echue.");
             return;
         }
-
-        agentPlayerMultimedia.state = agentPlayerMultimedia.started;
         agentPlayerMultimedia.start();
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.started);
     }
 
     @Override
     public void pause(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.pause();
         agentPlayerMultimedia.ownership.incrementJoue();
-        agentPlayerMultimedia.state = agentPlayerMultimedia.paused;
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.paused);
     }
 
     @Override
@@ -29,6 +28,11 @@ public class Created implements AgentPlayerState {
     @Override
     public void stop(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.stop();
-        agentPlayerMultimedia.state = agentPlayerMultimedia.stopped;
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.stopped);
+    }
+
+    @Override
+    public String toString() {
+        return "created";
     }
 }

@@ -44,7 +44,7 @@ class TP3 {
         for (int i = 0; i < medias.size(); i++) {
             AgentPlayerMultiMedia media = medias.get(i);
             System.out.println(i + " - "
-                    + media.getTitre() + " | "
+                    + media.getTitle() + " | "
                     + media.getContents() + " | "
                     + media.getClass() + " | "
                     + media.getOwnership().getClass());

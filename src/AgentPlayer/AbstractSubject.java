@@ -6,6 +6,6 @@ public interface AbstractSubject {
 
     public void unsubscribe(AbstractObserver observer);
 
-    public void notifyObservers();
+    public void notifyObservers(PropertyChangedEvent event);
 
 }

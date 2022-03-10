@@ -1,6 +1,7 @@
 package AgentPlayer;
 
 import Affichage.Afficheur;
+import Affichage.AfficheurObserverAdapteur;
 import MediaPlayer.MediaPlayer;
 import MediaPlayer.MediaPlayerFactory;
 import MediaPlayer.MacOSMediaPlayerFactory;
@@ -8,27 +9,18 @@ import MediaPlayer.WindowsMediaPlayerFactory;
 import MediaPlayer.LinuxMediaPlayerFactory;
 import Ownership.*;
 
-import javax.print.attribute.standard.Media;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Map;
 
 public abstract class AgentPlayerMultiMedia implements AbstractSubject {
 
-    public String titre;
+    public String title;
     public Object contents;
     public MediaPlayer player;
     protected MediaPlayerFactory playerFactory;
-    /*
-     * NOTE : Comme il est explique qu'il y a qu'un seul afficheur et qu'aucun autre objet ne semble jouer le role de
-     * subscriber selon le Observer DP, il est preferable de seulement creer une variable d'instance afficheur ici.
-     * Si jamais il y avait d'autres subscriber, il serait mieux de creer une liste de subscribers et d'y inclure l'afficheur.
-     */
-    public Afficheur afficheur = Afficheur.getAfficheur();
 
-    /*
-     On cree un dictionnaire de classe en utilisant les capacites reflexives.
-     Cela evite les conditionnelles pour determiner le type de factory a utiliser.
-    */
+    private ArrayList<AbstractObserver> observers = new ArrayList<AbstractObserver>();
 
     private static final Map<String,Class> factoryMap = Map.of(
             "win", WindowsMediaPlayerFactory.class,
@@ -45,22 +37,24 @@ public abstract class AgentPlayerMultiMedia implements AbstractSubject {
     public AgentPlayerState state;
     public Ownership ownership;
 
-    public AgentPlayerMultiMedia(String titre, Object contents, Ownership ownership) {
+    public AgentPlayerMultiMedia(String title, Object contents, Ownership ownership) {
         this.ownership = ownership;
-        this.titre = titre;
+        this.title = title;
         this.contents = contents;
-        state = created;
+        setState(created);
         String osName = System.getProperty("os.name").toLowerCase().substring(0,3);
         setFactory(osName);
+        subscribe(new AfficheurObserverAdapteur());
     }
 
     // Ce constructeur permet de simuler le comportement sur un autre systeme d'exploitation
-    public AgentPlayerMultiMedia(String titre, Object contents, Ownership ownership, String osName) {
+    public AgentPlayerMultiMedia(String title, Object contents, Ownership ownership, String osName) {
         this.ownership = ownership;
-        this.titre = titre;
+        this.title = title;
         this.contents = contents;
-        state = created;
+        setState(created);
         setFactory(osName);
+        subscribe(new AfficheurObserverAdapteur());
     }
 
     private void setFactory(String osName){
@@ -73,63 +67,43 @@ public abstract class AgentPlayerMultiMedia implements AbstractSubject {
         }
     }
 
-    /*
-     * NOTE : Une autre option pour determiner le type de factory serait de proceder par conditionnelles en utilisant
-     * les 3 methodes suivantes.
-     */
-    public static boolean isWindows() {
-        return System.getProperty("os.name").toLowerCase().startsWith("windows");
-    }
-
-    public static boolean isMac() {
-        return System.getProperty("os.name").toLowerCase().startsWith("mac");
-    }
-
-    public static boolean isUnix() {
-        return System.getProperty("os.name").toLowerCase().startsWith("linux");
-    }
-
-    /*
-     * NOTE :
-     */
-
     @Override
-    public void notifyObservers() {
-        /*
-         * NOTE : Normallement, il faudrait iterer sur une liste de souscripteurs, mais l'application n'en mentionne qu'un seul.
-         * NOTE : Normalement, il devrait y avoir une methode update, mais on ne peut pas changer la Classe Afficheur
-         */
-        afficheur.display(this.titre, this.state.toString());
+    public void notifyObservers(PropertyChangedEvent event) {
+        for (AbstractObserver observer: observers) {
+            observer.update(event);
+        }
     }
 
     @Override
-    public void subscribe(AbstractObserver observer) {
-        // NOTE : Normalement, cette methode ajouterait un souscripteur a la liste
+    public synchronized void subscribe(AbstractObserver observer) {
+        // Code tire ds notes de cours (PPT DP_Observer slide #28)
+        if (observer == null) {
+            throw new NullPointerException();
+        }
+        if (!observers.contains(observer)) {
+            observers.add(observer);
+        }
     }
 
     @Override
-    public void unsubscribe(AbstractObserver observer) {
-        // NOTE : Normalement, cette methode supprimerait un souscripteur de la liste
+    public synchronized void unsubscribe(AbstractObserver observer) {
+        observers.remove(observer);
     }
 
     public void clickStart() {
         this.state.start(this);
-        this.notifyObservers();
     }
 
     public void clickPause() {
         this.state.pause(this);
-        this.notifyObservers();
     }
 
     public void clickResume() {
         this.state.resume(this);
-        this.notifyObservers();
     }
 
     public void clickStop() {
         this.state.stop(this);
-        this.notifyObservers();
     }
 
     protected abstract void start();
@@ -174,12 +148,12 @@ public abstract class AgentPlayerMultiMedia implements AbstractSubject {
         }
     }
 
-    public String getTitre() {
-        return titre;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Object getContents() {
@@ -203,7 +177,9 @@ public abstract class AgentPlayerMultiMedia implements AbstractSubject {
     }
 
     public void setState(AgentPlayerState state) {
+        PropertyChangedEvent event = new PropertyChangedEvent(title, this.state, state);
         this.state = state;
+        this.notifyObservers(event);
     }
 
     public Ownership getOwnership() {

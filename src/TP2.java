@@ -1,7 +1,4 @@
 import AgentPlayer.*;
-import MediaPlayer.LinuxMediaPlayerFactory;
-import MediaPlayer.MacOSMediaPlayerFactory;
-import MediaPlayer.WindowsMediaPlayerFactory;
 import Ownership.Bought;
 import Ownership.Rental;
 import java.util.ArrayList;
@@ -88,7 +85,7 @@ class TP2 {
         for (int i = 0; i < medias.size(); i++) {
             AgentPlayerMultiMedia media = medias.get(i);
             System.out.println(i + " - "
-                    + media.getTitre() + " | "
+                    + media.getTitle() + " | "
                     + media.getContents() + " | "
                     + media.getClass() + " | "
                     + media.getOwnership().getClass());

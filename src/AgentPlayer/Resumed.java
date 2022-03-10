@@ -12,7 +12,7 @@ public class Resumed implements AgentPlayerState {
     public void pause(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.pause();
         agentPlayerMultimedia.ownership.incrementJoue();
-        agentPlayerMultimedia.state = agentPlayerMultimedia.paused;
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.paused);
     }
 
     @Override
@@ -24,6 +24,11 @@ public class Resumed implements AgentPlayerState {
     @Override
     public void stop(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.stop();
-        agentPlayerMultimedia.state = agentPlayerMultimedia.stopped;
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.stopped);
+    }
+
+    @Override
+    public String toString() {
+        return "resumed";
     }
 }

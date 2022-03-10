@@ -8,8 +8,8 @@ public class Stopped implements AgentPlayerState {
             System.out.println("La location est echue.");
             return;
         }
-        agentPlayerMultimedia.state = agentPlayerMultimedia.started;
         agentPlayerMultimedia.start();
+        agentPlayerMultimedia.setState(agentPlayerMultimedia.started);
         return;
     }
 
@@ -29,5 +29,10 @@ public class Stopped implements AgentPlayerState {
     public void stop(AgentPlayerMultiMedia agentPlayerMultimedia) {
         System.out.println("Le media est deja a l'etat stop.");
         return;
+    }
+
+    @Override
+    public String toString() {
+        return "stopped";
     }
 }

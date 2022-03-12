@@ -1,8 +1,11 @@
-import AgentPlayer.*;
-import MediaPlayer.PlayerMusique;
-import MediaPlayer.PlayerVideo;
-import MediaPlayer.QuickTime;
-import MediaPlayer.iTunes;
+import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Media.AgentPlayerMusique;
+import AgentPlayer.Media.AgentPlayerVideo;
+import AgentPlayer.States.*;
+import MediaPlayer.Players.PlayerMusique;
+import MediaPlayer.Players.PlayerVideo;
+import MediaPlayer.MacOS.QuickTime;
+import MediaPlayer.MacOS.iTunes;
 import Ownership.Bought;
 import Ownership.Rental;
 import org.junit.jupiter.api.BeforeEach;
@@ -48,7 +51,7 @@ class AgentPlayerMultiMediaTest {
 
     }
 
-    void setStates(AgentPlayerState state) {
+    void setStates(State state) {
         // On met l'etat a started
         apmMusique.setState(state);
         apmMusiqueLoue.setState(state);
@@ -260,7 +263,7 @@ class AgentPlayerMultiMediaTest {
     @Test
     void stop() {
 
-        // Contexte : AgentPlayer.Started
+        // Contexte : AgentPlayer.States.Started
         setStates(new Started());
         setDefaultPlayers();
 
@@ -275,7 +278,7 @@ class AgentPlayerMultiMediaTest {
         assertInstanceOf(Stopped.class, apmVideo.getState());
         assertInstanceOf(Stopped.class, apmVideoLoue.getState());
 
-        // Contexte : AgentPlayer.Resumed
+        // Contexte : AgentPlayer.States.Resumed
         setStates(new Resumed());
 
         apmMusique.clickStop();

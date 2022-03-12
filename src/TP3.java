@@ -1,4 +1,6 @@
-import AgentPlayer.*;
+import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Media.AgentPlayerMusique;
+import AgentPlayer.Media.AgentPlayerVideo;
 import Ownership.Bought;
 import Ownership.Rental;
 

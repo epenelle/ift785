@@ -1,0 +1,314 @@
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.351}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.405}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.409}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.41}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.434}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.434}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.438}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.438}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.439}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.439}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.439}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.44}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.449}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.45}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.45}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.451}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.451}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.451}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.452}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.452}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.465}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.466}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.467}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.467}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.467}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.467}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.468}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.468}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.472}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.473}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.474}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.475}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:06:42.477}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:06:42.477}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:06:42.478}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:06:42.478}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:06:42.478}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:06:42.479}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:06:42.479}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:06:42.479}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.479}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.479}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.48}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.48}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.486}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.486}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.486}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.486}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.487}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.488}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.489}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 13:06:42.49}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.492}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.492}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.492}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.493}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.496}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.496}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.502}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.503}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.508}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.509}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.509}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 13:06:42.509}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.509}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.509}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.51}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:06:42.51}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.512}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.512}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.518}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.518}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.518}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.519}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.519}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:06:42.519}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:06:42.519}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:06:42.52}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:06:42.521}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:06:42.525}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:06:42.525}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:06:42.526}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:06:42.526}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:06:42.526}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.529}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.529}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.529}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:06:42.53}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.533}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.533}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.534}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:06:42.537}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:06:42.537}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:06:42.538}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:06:42.538}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:06:42.538}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.54}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.541}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.541}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:06:42.542}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.314}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.335}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.337}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.337}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.356}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.358}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.358}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.358}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.359}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.359}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.359}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.36}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.363}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.363}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.363}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.364}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.364}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.364}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.364}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.364}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.37}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.37}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.37}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.37}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.371}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.371}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.371}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.375}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.38}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.381}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.381}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.381}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:51:54.382}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:51:54.382}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:51:54.387}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=started, timeOfChange=2022-03-12 13:51:54.388}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:51:54.389}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:51:54.39}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:51:54.391}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 13:51:54.392}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.393}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.394}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.394}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.395}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.399}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.4}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.4}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.4}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.401}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.401}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.401}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 13:51:54.403}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.409}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.409}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.41}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.411}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.42}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.422}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.423}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.424}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.428}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.429}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.429}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 13:51:54.429}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.429}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.429}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.43}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 13:51:54.43}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.432}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.433}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.434}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.434}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.434}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.435}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.435}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 13:51:54.436}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:51:54.436}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:51:54.436}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:51:54.437}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=stopped, timeOfChange=2022-03-12 13:51:54.437}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:51:54.437}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:51:54.437}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:51:54.438}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=paused, timeOfChange=2022-03-12 13:51:54.438}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.464}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.465}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.473}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 13:51:54.477}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.478}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.478}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.478}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 13:51:54.478}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:51:54.479}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:51:54.479}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:51:54.48}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=started, timeOfChange=2022-03-12 13:51:54.486}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.486}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.487}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.487}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 13:51:54.488}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:03:35.685}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 16:03:43.094}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:03:55.794}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.759}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.789}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.791}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.792}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.813}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.814}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.817}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.818}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.818}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.818}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.818}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.819}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.833}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.833}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.835}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.836}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.836}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.837}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.837}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.838}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.85}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.851}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.851}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.852}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.853}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.853}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.853}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.853}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.858}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.859}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.863}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.864}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=started, timeOfChange=2022-03-12 16:04:17.878}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=started, timeOfChange=2022-03-12 16:04:17.879}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=started, timeOfChange=2022-03-12 16:04:17.888}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=started, timeOfChange=2022-03-12 16:04:17.889}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 16:04:17.889}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 16:04:17.889}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 16:04:17.889}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=stopped, timeOfChange=2022-03-12 16:04:17.89}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:17.898}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:17.898}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:17.899}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:17.899}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.905}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.905}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.906}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.906}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.91}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.911}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.912}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=started, timeOfChange=2022-03-12 16:04:17.912}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.914}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.915}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.915}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.915}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.924}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.925}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.927}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:17.928}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.94}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.942}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.944}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=created, timeOfChange=2022-03-12 16:04:17.946}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.946}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.946}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.947}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:04:17.947}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.96}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.971}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.972}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:17.972}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.973}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.973}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.973}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=created, timeOfChange=2022-03-12 16:04:17.973}
+PropertyChangedEvent{title='Billie Jean', newState=paused, previousState=stopped, timeOfChange=2022-03-12 16:04:17.973}
+PropertyChangedEvent{title='Thriller', newState=paused, previousState=stopped, timeOfChange=2022-03-12 16:04:17.974}
+PropertyChangedEvent{title='Never gonna give you up', newState=paused, previousState=stopped, timeOfChange=2022-03-12 16:04:17.974}
+PropertyChangedEvent{title='Numa numa', newState=paused, previousState=stopped, timeOfChange=2022-03-12 16:04:17.974}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=paused, timeOfChange=2022-03-12 16:04:17.988}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=paused, timeOfChange=2022-03-12 16:04:17.989}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=paused, timeOfChange=2022-03-12 16:04:17.989}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=paused, timeOfChange=2022-03-12 16:04:17.989}
+PropertyChangedEvent{title='Billie Jean', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:18.004}
+PropertyChangedEvent{title='Thriller', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:18.004}
+PropertyChangedEvent{title='Never gonna give you up', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:18.004}
+PropertyChangedEvent{title='Numa numa', newState=created, previousState=created, timeOfChange=2022-03-12 16:04:18.004}
+PropertyChangedEvent{title='Billie Jean', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:18.005}
+PropertyChangedEvent{title='Thriller', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:18.005}
+PropertyChangedEvent{title='Never gonna give you up', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:18.008}
+PropertyChangedEvent{title='Numa numa', newState=started, previousState=created, timeOfChange=2022-03-12 16:04:18.008}
+PropertyChangedEvent{title='Billie Jean', newState=resumed, previousState=started, timeOfChange=2022-03-12 16:04:18.011}
+PropertyChangedEvent{title='Thriller', newState=resumed, previousState=started, timeOfChange=2022-03-12 16:04:18.011}
+PropertyChangedEvent{title='Never gonna give you up', newState=resumed, previousState=started, timeOfChange=2022-03-12 16:04:18.012}
+PropertyChangedEvent{title='Numa numa', newState=resumed, previousState=started, timeOfChange=2022-03-12 16:04:18.013}
+PropertyChangedEvent{title='Billie Jean', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:18.014}
+PropertyChangedEvent{title='Thriller', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:18.014}
+PropertyChangedEvent{title='Never gonna give you up', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:18.015}
+PropertyChangedEvent{title='Numa numa', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:04:18.017}
+PropertyChangedEvent{title='Reminder', newState=started, previousState=created, timeOfChange=2022-03-12 16:26:41.402}
+PropertyChangedEvent{title='Reminder', newState=started, previousState=created, timeOfChange=2022-03-12 16:29:15.586}
+PropertyChangedEvent{title='Reminder', newState=global scene, previousState=started, timeOfChange=2022-03-12 16:29:21.999}
+PropertyChangedEvent{title='Reminder', newState=started, previousState=created, timeOfChange=2022-03-12 16:30:17.591}
+PropertyChangedEvent{title='Reminder', newState=global scene, previousState=started, timeOfChange=2022-03-12 16:30:24.209}
+PropertyChangedEvent{title='Reminder', newState=resumed, previousState=global scene, timeOfChange=2022-03-12 16:30:57.068}
+PropertyChangedEvent{title='Reminder', newState=paused, previousState=resumed, timeOfChange=2022-03-12 16:31:03.03}
+PropertyChangedEvent{title='Reminder', newState=resumed, previousState=paused, timeOfChange=2022-03-12 16:31:15.861}
+PropertyChangedEvent{title='Reminder', newState=global scene, previousState=resumed, timeOfChange=2022-03-12 16:31:21.303}
+PropertyChangedEvent{title='Reminder', newState=resumed, previousState=global scene, timeOfChange=2022-03-12 16:31:32.8}
+PropertyChangedEvent{title='Reminder', newState=stopped, previousState=resumed, timeOfChange=2022-03-12 16:31:34.878}

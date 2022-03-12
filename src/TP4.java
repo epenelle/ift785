@@ -1,3 +1,4 @@
+import AgentPlayer.Media.AgentPlayer3Dmov;
 import AgentPlayer.Media.AgentPlayerMultiMedia;
 import AgentPlayer.Media.AgentPlayerMusique;
 import AgentPlayer.Media.AgentPlayerVideo;
@@ -7,7 +8,7 @@ import Ownership.Rental;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class TP1 {
+class TP4 {
 
     private static  ArrayList<AgentPlayerMultiMedia> medias = new ArrayList<AgentPlayerMultiMedia>();
 
@@ -17,6 +18,8 @@ class TP1 {
         medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2)));
         medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought()));
         medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2)));
+        medias.add(new AgentPlayer3Dmov("Blinding Lights", "https://www.youtube.com/watch?v=4NRXx6U8ABQ", new Bought()));
+        medias.add(new AgentPlayer3Dmov("Reminder", "https://www.youtube.com/watch?v=JZjAg6fK-BQ", new Rental(2)));
 
         displayMediasList();
         AgentPlayerMultiMedia media = getUserMediaChoice();

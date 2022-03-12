@@ -1,10 +1,6 @@
 package Affichage;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import AgentPlayer.AgentPlayerState;
-import AgentPlayer.PropertyChangedEvent;
 
 public class Afficheur {
 
@@ -26,7 +22,7 @@ public class Afficheur {
         System.out.println(titre + " >>> " + etat);
     }
 
-    public void displayLog(PropertyChangedEvent event){
+    public void displayLog(StateChangedEvent event){
         try {
             FileWriter writer = new FileWriter("logFile.txt", true);
             writer.write(event.toString() + "\n");

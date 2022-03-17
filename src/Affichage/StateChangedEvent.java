@@ -30,26 +30,6 @@ public class StateChangedEvent {
         return newState;
     }
 
-    public void setNewState(State newState) {
-        this.newState = newState;
-    }
-
-    public State getPreviousState() {
-        return previousState;
-    }
-
-    public void setPreviousState(State previousState) {
-        this.previousState = previousState;
-    }
-
-    public Timestamp getTimeOfChange() {
-        return timeOfChange;
-    }
-
-    public void setTimeOfChange(Timestamp timeOfChange) {
-        this.timeOfChange = timeOfChange;
-    }
-
     @Override
     public String toString() {
         return "PropertyChangedEvent{" +

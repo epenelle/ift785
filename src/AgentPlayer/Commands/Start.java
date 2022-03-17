@@ -1,10 +1,10 @@
 package AgentPlayer.Commands;
 
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
 
 public class Start implements Command{
 
-    AgentPlayerMultiMedia agentPlayerMultiMedia;
+    private AgentPlayerMultiMedia agentPlayerMultiMedia;
 
     public Start(AgentPlayerMultiMedia agentPlayerMultimedia) {
         this.agentPlayerMultiMedia = agentPlayerMultimedia;

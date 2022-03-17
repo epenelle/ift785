@@ -1,6 +1,6 @@
 package AgentPlayer.Commands;
 
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
 
 public class Pause implements Command{
 

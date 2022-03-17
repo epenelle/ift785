@@ -1,8 +1,4 @@
-import AgentPlayer.Media.AgentPlayerMultiMedia;
-import AgentPlayer.Media.AgentPlayerMusique;
-import AgentPlayer.Media.AgentPlayerVideo;
-import Ownership.Bought;
-import Ownership.Rental;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,23 +9,23 @@ class TP1 {
 
     public static void main(String args[]){
 
-        medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought()));
-        medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2)));
-        medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought()));
-        medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2)));
+//        medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought()));
+//        medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2)));
+//        medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought()));
+//        medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2)));
 
-        displayMediasList();
-        AgentPlayerMultiMedia media = getUserMediaChoice();
-
-
-        boolean quitFlag = false;
-        while (!quitFlag) {
-            media.displayInfo(true);
-            String optionString = chooseOption(media);
-            quitFlag = optionString.equals("quit");
-            if(!quitFlag)
-                media.executeOption(optionString);
-        }
+//        displayMediasList();
+//        AgentPlayerMultiMedia media = getUserMediaChoice();
+//
+//
+//        boolean quitFlag = false;
+//        while (!quitFlag) {
+//            media.displayInfo(true);
+//            String optionString = chooseOption(media);
+//            quitFlag = optionString.equals("quit");
+//            if(!quitFlag)
+//                media.executeOption(optionString);
+//        }
 
     }
 
@@ -40,18 +36,18 @@ class TP1 {
     }
 
 
-    private static void displayMediasList(){
-        System.out.println("   titre   |   contenu   |   classe   |   Ownership (bought/rental)");
-
-        for (int i = 0; i < medias.size(); i++) {
-            AgentPlayerMultiMedia media = medias.get(i);
-            System.out.println(i + " - "
-                    + media.getTitle() + " | "
-                    + media.getContents() + " | "
-                    + media.getClass() + " | "
-                    + media.getOwnership().getClass());
-        }
-    }
+//    private static void displayMediasList(){
+//        System.out.println("   titre   |   contenu   |   classe   |   Multimedia.Ownership (bought/rental)");
+//
+//        for (int i = 0; i < medias.size(); i++) {
+//            AgentPlayerMultiMedia media = medias.get(i);
+//            System.out.println(i + " - "
+//                    + media.getTitle() + " | "
+//                    + media.getContents() + " | "
+//                    + media.getClass() + " | "
+//                    + media.getOwnership().getClass());
+//        }
+//    }
 
     private static AgentPlayerMultiMedia getUserMediaChoice() {
 

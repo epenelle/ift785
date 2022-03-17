@@ -1,6 +1,6 @@
 package AgentPlayer.Commands;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
 
 public class EnableGlobalScene implements Command{
 

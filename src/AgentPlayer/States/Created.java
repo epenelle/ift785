@@ -1,25 +1,33 @@
 package AgentPlayer.States;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
+import Multimedia.AbstractMultimedia;
 
 public class Created implements State {
 
     @Override
     public void start(AgentPlayerMultiMedia agentPlayerMultimedia) {
-        if (!agentPlayerMultimedia.ownership.allowStart()){
+        AbstractMultimedia multimedia = (AbstractMultimedia) agentPlayerMultimedia.getPlayer().getMultimedia();
+
+        if (!agentPlayerMultimedia.getPlayer().getMultimedia().getOwnership().allowStart()){
             System.out.println("La location est echue.");
+            multimedia.setState(multimedia.expiredState);
             return;
         }
         agentPlayerMultimedia.start();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.started);
+        multimedia.setState(multimedia.playingState);
     }
 
     @Override
     public void pause(AgentPlayerMultiMedia agentPlayerMultimedia) {
+        AbstractMultimedia multimedia = (AbstractMultimedia) agentPlayerMultimedia.getPlayer().getMultimedia();
+
         agentPlayerMultimedia.pause();
-        agentPlayerMultimedia.ownership.incrementJoue();
+        agentPlayerMultimedia.getPlayer().getMultimedia().getOwnership().incrementJoue();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.paused);
+        multimedia.setState(multimedia.playingState);
     }
 
     @Override
@@ -30,8 +38,15 @@ public class Created implements State {
 
     @Override
     public void stop(AgentPlayerMultiMedia agentPlayerMultimedia) {
+        AbstractMultimedia multimedia = (AbstractMultimedia) agentPlayerMultimedia.getPlayer().getMultimedia();
         agentPlayerMultimedia.stop();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.stopped);
+
+        if (!multimedia.getOwnership().allowStart()){
+            multimedia.setState(multimedia.expiredState);
+            return;
+        }
+        multimedia.setState(multimedia.availableState);
     }
 
     @Override

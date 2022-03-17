@@ -1,54 +1,55 @@
-import AgentPlayer.Media.AgentPlayerMultiMedia;
-import AgentPlayer.Media.AgentPlayerMusique;
-import AgentPlayer.Media.AgentPlayerVideo;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
+import AgentPlayer.MediaPlayer.Players.PlayerMusique;
+import AgentPlayer.MediaPlayer.Players.PlayerVideo;
 import AgentPlayer.States.*;
-import MediaPlayer.Players.PlayerMusique;
-import MediaPlayer.Players.PlayerVideo;
-import MediaPlayer.MacOS.QuickTime;
-import MediaPlayer.MacOS.iTunes;
-import Ownership.Bought;
-import Ownership.Rental;
+import Multimedia.Musique;
+import Multimedia.Ownership.Bought;
+import Multimedia.Ownership.Rental;
+import Multimedia.Video;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 class AgentPlayerMultiMediaTest {
 
-    AgentPlayerMusique apmMusique;
-    AgentPlayerMusique apmMusiqueLoue;
+
+    final int NB_MAX_DEFAUT = 10;
+    final int RESOLUTION_DEFAUT = 1080;
+
+    Musique musique1;
+    Musique musique2;
+    Video video1;
+    Video video2;
+
+    AgentPlayerMultiMedia apmMusique;
+    AgentPlayerMultiMedia apmMusiqueLoue;
     AgentPlayerMultiMedia apmVideo;
     AgentPlayerMultiMedia apmVideoLoue;
-    int nbMaxParDefaut = 10;
+
+
+
 
     @BeforeEach
     void setUp() {
 
-        apmMusique = new AgentPlayerMusique(
-                "Billie Jean",
-                "Meilleure chanson de son année.",
-                new Bought()
-        );
+        musique1 =  new Musique("Billie Jean", "Micheal Jackson", true, new Bought());
+        musique2 = new Musique("Thriller", "Micheal Jackson", true, new Rental(NB_MAX_DEFAUT));
+        video1 = new Video("Never gonna give you up", "Rick Astley", true, new Bought(), RESOLUTION_DEFAUT);
+        video2 = new Video("Numa numa", "famous youtuber", true, new Rental(NB_MAX_DEFAUT), RESOLUTION_DEFAUT);
 
-        apmMusiqueLoue = new AgentPlayerMusique(
-                "Thriller",
-                "Un des meilleurs hits de MJ's",
-                new Rental(nbMaxParDefaut)
-        );
+        apmMusique = new AgentPlayerMultiMedia();
+        apmMusiqueLoue = new AgentPlayerMultiMedia();
+        apmVideo = new AgentPlayerMultiMedia();
+        apmVideoLoue = new AgentPlayerMultiMedia();
 
-        apmVideo = new AgentPlayerVideo(
-                "Never gonna give you up",
-                "Got Rick Rolled.",
-                new Bought()
-        );
+    }
 
-        apmVideoLoue = new AgentPlayerVideo(
-                "Numa numa",
-                "Video tres drole",
-                new Rental(nbMaxParDefaut)
-        );
-
+    void selectMultimediaForAll() {
+        apmMusique.selectMultimedia(musique1);
+        apmMusiqueLoue.selectMultimedia(musique2);
+        apmVideo.selectMultimedia(video1);
+        apmVideoLoue.selectMultimedia(video2);
     }
 
     void setStates(State state) {
@@ -59,13 +60,14 @@ class AgentPlayerMultiMediaTest {
         apmVideoLoue.setState(state);
     }
 
-    void setDefaultPlayers() {
-        // On met les players par defaut
-        apmMusique.setPlayer(new iTunes());
-        apmMusiqueLoue.setPlayer(new iTunes());
-        apmVideo.setPlayer(new QuickTime());
-        apmVideoLoue.setPlayer(new QuickTime());
-    }
+//    void setDefaultPlayers() {
+//        // On met les players par defaut
+//        apmMusique.setPlayer(new iTunes());
+//        apmMusiqueLoue.setPlayer(new iTunes());
+//        apmVideo.setPlayer(new QuickTime());
+//        apmVideoLoue.setPlayer(new QuickTime());
+//    }
+
     @Test
     void startEtat() {
 
@@ -76,6 +78,7 @@ class AgentPlayerMultiMediaTest {
         assertInstanceOf(Created.class, apmVideoLoue.getState());
 
         // start
+        selectMultimediaForAll();
         apmMusique.clickStart();
         apmMusiqueLoue.clickStart();
         apmVideo.clickStart();
@@ -97,6 +100,7 @@ class AgentPlayerMultiMediaTest {
         assertNull(apmVideoLoue.getPlayer());
 
         // start
+        selectMultimediaForAll();
         apmMusique.clickStart();
         apmMusiqueLoue.clickStart();
         apmVideo.clickStart();
@@ -111,7 +115,8 @@ class AgentPlayerMultiMediaTest {
 
     @Test
     void startLocationTerminee() {
-        apmMusiqueLoue.ownership.setJoue(nbMaxParDefaut);
+        selectMultimediaForAll();
+        apmMusiqueLoue.getPlayer().getMultimedia().getOwnership().setJoue(NB_MAX_DEFAUT);
         apmMusiqueLoue.clickStart();
         assertInstanceOf(Created.class, apmMusiqueLoue.getState());
     }
@@ -119,9 +124,12 @@ class AgentPlayerMultiMediaTest {
     @Test
     void pauseWhenStarted() {
 
+
+
         // Contexte
+        selectMultimediaForAll();
         setStates(new Started());
-        setDefaultPlayers();
+//        setDefaultPlayers();
 
         apmMusique.clickPause();
         apmMusiqueLoue.clickPause();
@@ -139,8 +147,8 @@ class AgentPlayerMultiMediaTest {
     void pauseWhenStopped() {
 
         // Contexte
+        selectMultimediaForAll();
         setStates(new Stopped());
-        setDefaultPlayers();
 
         apmMusique.clickPause();
         apmMusiqueLoue.clickPause();
@@ -158,8 +166,8 @@ class AgentPlayerMultiMediaTest {
     void pauseCompteurJoue() {
 
         // Contexte
+        selectMultimediaForAll();
         setStates(new Started());
-        setDefaultPlayers();
 
         apmMusique.clickPause();
         apmMusiqueLoue.clickPause();
@@ -167,10 +175,10 @@ class AgentPlayerMultiMediaTest {
         apmVideoLoue.clickPause();
 
         // Apres
-        assertEquals(0, apmMusique.ownership.getJoue()); // doit demeurer inchange
-        assertEquals(1, apmMusiqueLoue.ownership.getJoue()); // doit incremente
-        assertEquals(0, apmVideo.ownership.getJoue()); // doit demeurer inchange
-        assertEquals(1, apmVideoLoue.ownership.getJoue()); // doit incremente
+        assertEquals(0, apmMusique.getPlayer().getMultimedia().getOwnership().getJoue()); // doit demeurer inchange
+        assertEquals(1, apmMusiqueLoue.getPlayer().getMultimedia().getOwnership().getJoue()); // doit incremente
+        assertEquals(0, apmVideo.getPlayer().getMultimedia().getOwnership().getJoue()); // doit demeurer inchange
+        assertEquals(1, apmVideoLoue.getPlayer().getMultimedia().getOwnership().getJoue()); // doit incremente
 
     }
 
@@ -178,8 +186,8 @@ class AgentPlayerMultiMediaTest {
     void resume() {
 
         // Contexte
+        selectMultimediaForAll();
         setStates(new Paused());
-        setDefaultPlayers();
 
         apmMusique.clickResume();
         apmMusiqueLoue.clickResume();
@@ -198,7 +206,7 @@ class AgentPlayerMultiMediaTest {
     void resumeWhenNotPaused() {
 
         // Contexte
-        setDefaultPlayers();
+        selectMultimediaForAll();
 
         setStates(new Created());
         apmMusique.clickResume();
@@ -246,26 +254,27 @@ class AgentPlayerMultiMediaTest {
     void resumeCompteurJoue() {
 
         // Contexte
+        selectMultimediaForAll();
         setStates(new Paused());
-        setDefaultPlayers();
+
 
         apmMusique.clickResume();
         apmMusiqueLoue.clickResume();
         apmVideo.clickResume();
         apmVideoLoue.clickResume();
 
-        assertEquals(0, apmMusique.ownership.getJoue());
-        assertEquals(-1, apmMusiqueLoue.ownership.getJoue());
-        assertEquals(0, apmVideo.ownership.getJoue());
-        assertEquals(-1, apmVideoLoue.ownership.getJoue());
+        assertEquals(0, apmMusique.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(-1, apmMusiqueLoue.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(0, apmVideo.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(-1, apmVideoLoue.getPlayer().getMultimedia().getOwnership().getJoue());
     }
 
     @Test
     void stop() {
 
         // Contexte : AgentPlayer.States.Started
+        selectMultimediaForAll();
         setStates(new Started());
-        setDefaultPlayers();
 
         apmMusique.clickStop();
         apmMusiqueLoue.clickStop();
@@ -296,7 +305,7 @@ class AgentPlayerMultiMediaTest {
     @Test
     void stopWhenNotStarted() {
 
-        setDefaultPlayers();
+        selectMultimediaForAll();
 
         setStates(new Created());
         apmMusique.clickStop();
@@ -333,17 +342,17 @@ class AgentPlayerMultiMediaTest {
     @Test
     void stopCompteurJoue() {
         // Contexte
+        selectMultimediaForAll();
         setStates(new Created());
-        setDefaultPlayers();
 
         apmMusique.clickStop();
         apmMusiqueLoue.clickStop();
         apmVideo.clickStop();
         apmVideoLoue.clickStop();
 
-        assertEquals( 0, apmMusique.ownership.getJoue());
-        assertEquals(1, apmMusiqueLoue.ownership.getJoue());
-        assertEquals(0, apmVideo.ownership.getJoue());
-        assertEquals(1, apmVideoLoue.ownership.getJoue());
+        assertEquals( 0, apmMusique.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(1, apmMusiqueLoue.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(0, apmVideo.getPlayer().getMultimedia().getOwnership().getJoue());
+        assertEquals(1, apmVideoLoue.getPlayer().getMultimedia().getOwnership().getJoue());
     }
 }

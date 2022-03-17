@@ -1,7 +1,7 @@
 package AgentPlayer.States;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
 
 public interface State {
 

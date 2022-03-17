@@ -1,7 +1,7 @@
 package AgentPlayer.States;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
 
 public class Paused implements State {
 
@@ -20,7 +20,7 @@ public class Paused implements State {
     @Override
     public void resume(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.resume();
-        agentPlayerMultimedia.ownership.decrementJoue();
+        agentPlayerMultimedia.getPlayer().getMultimedia().getOwnership().decrementJoue();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.resumed);
     }
 

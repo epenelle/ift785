@@ -1,7 +1,8 @@
 package AgentPlayer.States;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
+import Multimedia.AbstractMultimedia;
 
 public class Resumed implements State {
 
@@ -14,7 +15,7 @@ public class Resumed implements State {
     @Override
     public void pause(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.pause();
-        agentPlayerMultimedia.ownership.incrementJoue();
+        agentPlayerMultimedia.getPlayer().getMultimedia().getOwnership().incrementJoue();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.paused);
     }
 
@@ -28,6 +29,12 @@ public class Resumed implements State {
     public void stop(AgentPlayerMultiMedia agentPlayerMultimedia) {
         agentPlayerMultimedia.stop();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.stopped);
+        AbstractMultimedia multimedia = (AbstractMultimedia) agentPlayerMultimedia.getPlayer().getMultimedia();
+        if (multimedia.getOwnership().allowStart()) {
+            multimedia.setState(multimedia.availableState);
+        } else {
+            multimedia.setState(multimedia.expiredState);
+        }
     }
 
     @Override

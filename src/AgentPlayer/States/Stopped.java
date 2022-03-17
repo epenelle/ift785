@@ -1,18 +1,21 @@
 package AgentPlayer.States;
 
-import AgentPlayer.Media.AgentPlayer3Dmov;
-import AgentPlayer.Media.AgentPlayerMultiMedia;
+import AgentPlayer.Agents.AgentPlayer3Dmov;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
+import Multimedia.AbstractMultimedia;
 
 public class Stopped implements State {
 
     @Override
     public void start(AgentPlayerMultiMedia agentPlayerMultimedia) {
-        if (!agentPlayerMultimedia.ownership.allowStart()) {
+        AbstractMultimedia multimedia = (AbstractMultimedia) agentPlayerMultimedia.getPlayer().getMultimedia();
+        if (!agentPlayerMultimedia.getPlayer().getMultimedia().getOwnership().allowStart()) {
             System.out.println("La location est echue.");
             return;
         }
         agentPlayerMultimedia.start();
         agentPlayerMultimedia.setState(agentPlayerMultimedia.started);
+        multimedia.setState(multimedia.playingState);
         return;
     }
 

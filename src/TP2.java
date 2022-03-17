@@ -1,8 +1,5 @@
-import AgentPlayer.Media.AgentPlayerMultiMedia;
-import AgentPlayer.Media.AgentPlayerMusique;
-import AgentPlayer.Media.AgentPlayerVideo;
-import Ownership.Bought;
-import Ownership.Rental;
+import AgentPlayer.Agents.AgentPlayerMultiMedia;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
@@ -25,17 +22,17 @@ class TP2 {
         if (osName == "defaut"){
             System.out.println("Votre systeme d'exploitation est " + System.getProperty("os.name") + ".");
             // AgentPlayer par defaut : determine l'os avec System.getProperty("os.name")
-            medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought()));
-            medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2)));
-            medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought()));
-            medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2)));
+//            medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought()));
+//            medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2)));
+//            medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought()));
+//            medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2)));
         }
         else {
-            System.out.println("Le systeme d'exploitation simulé est " + osLongDefinitionMap.get(osName) + ".");
-            medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought(), osName));
-            medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2), osName));
-            medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought(), osName));
-            medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2), osName));
+//            System.out.println("Le systeme d'exploitation simulé est " + osLongDefinitionMap.get(osName) + ".");
+//            medias.add(new AgentPlayerMusique("Billie Jean", "Billie Jean is not my lover!", new Bought(), osName));
+//            medias.add(new AgentPlayerMusique("Thriller", "Cause this is thriller, thriller night!", new Rental(2), osName));
+//            medias.add(new AgentPlayerVideo("Rick Roll", "https://www.youtube.com/watch?v=dQw4w9WgXcQ", new Bought(), osName));
+//            medias.add(new AgentPlayerVideo("Numa Numa", "https://www.youtube.com/watch?v=KmtzQCSh6xk", new Rental(2), osName));
         }
 
         displayMediasList();
@@ -82,15 +79,15 @@ class TP2 {
 
 
     private static void displayMediasList(){
-        System.out.println("   titre   |   contenu   |   classe   |   Ownership (bought/rental)");
+        System.out.println("   titre   |   contenu   |   classe   |   Multimedia.Ownership (bought/rental)");
 
         for (int i = 0; i < medias.size(); i++) {
             AgentPlayerMultiMedia media = medias.get(i);
-            System.out.println(i + " - "
-                    + media.getTitle() + " | "
-                    + media.getContents() + " | "
-                    + media.getClass() + " | "
-                    + media.getOwnership().getClass());
+//            System.out.println(i + " - "
+//                    + media.getTitle() + " | "
+//                    + media.getContents() + " | "
+//                    + media.getClass() + " | "
+//                    + media.getOwnership().getClass());
         }
     }
 
